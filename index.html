@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   
+   <title>calculator</title>
+</head>
+<body>
+   <div class="container">
+         <input type="text" id="show"/>
+      <div class="btn">
+         <button onclick="ac()">AC</button>
+         <button onclick="del()">DE</button>
+         <button onclick="val('%')">%</button>
+         <button onclick="val('/')">/</button>
+         <button onclick="val('1')">1</button>
+         <button onclick="val('2')">2</button>
+         <button onclick="val('3')">3</button>
+         <button onclick="val('*')">*</button>
+         <button onclick="val('4')">4</button>
+         <button onclick="val('5')">5</button>
+         <button onclick="val('6')">6</button>
+         <button onclick="val('-')">-</button>
+         <button onclick="val('7')">7</button>
+         <button onclick="val('8')">8</button>
+         <button onclick="val('9')">9</button>
+         <button onclick="val('+')">+</button>
+         <button onclick="val('.')">.</button>
+         <button onclick="val('0')">0</button>
+         <button onclick="cal()" id="equal">=</button>
+      </div>
+   </div>
+
+   <script>
+      var show=document.getElementById("show");
+
+      function ac(){
+         show.value = " ";
+      }
+
+      function del(){
+         show.value =show.value.slice(0,-1);
+      }
+
+      function val(num){
+         show.value += num;
+      }
+
+      function cal(){
+         show.value = eval(show.value)
+      }
+
+
+   </script>
+   
+</body>
+</html>
